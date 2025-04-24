@@ -1,0 +1,10 @@
+spring:
+  kakao:
+    auth:
+      client: 8d14a9a17dda87fad5fe35f8a3f829fd
+      redirect: http://localhost:8081/auth/login/kakao
+      requestToken: https://kauth.kakao.com/oauth/token
+      requestProfile: https://kapi.kakao.com/v2/user/me
+      validToken: https://kapi.kakao.com/v1/user/access_token_info
+server:
+  port: 8081

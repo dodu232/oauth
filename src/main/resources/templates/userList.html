@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<tbody>
+<tr th:each="e : ${entries}">
+  <td th:text="${e.key}">KEY</td>
+  <td th:text="${e.value}">VALUE</td>
+</tr>
+</tbody>
+</body>
+</html>
