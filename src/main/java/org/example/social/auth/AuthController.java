@@ -11,10 +11,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequiredArgsConstructor
 @RequestMapping("/auth")
 public class AuthController {
+
     private final AuthService authService;
 
     @GetMapping("/login")
-    public String login(){
+    public String login() {
         return "index";
     }
 
@@ -22,7 +23,7 @@ public class AuthController {
     public String oauthCallback(
         @RequestParam("code") String accessCode,
         Model model
-    ){
+    ) {
         String accessToken = authService.getAccessToken(accessCode);
         String name = authService.getNickname(accessToken);
         model.addAttribute("message", "어서오세요 " + name + "님");

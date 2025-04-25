@@ -10,7 +10,7 @@ public class UserService {
 
     private final User user;
 
-    public Map<String, String> getUserList(){
+    public Map<String, String> getUserList() {
         return user.getUserList();
     }
 }
