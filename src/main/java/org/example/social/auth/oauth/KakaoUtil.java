@@ -71,7 +71,7 @@ public class KakaoUtil {
 
     public void validateToken(String accessToken) {
         var webClient = WebClient.builder()
-            .baseUrl(requestProfileURL)
+            .baseUrl(validTokenURL)
             .defaultHeader("Authorization", "Bearer " + accessToken)
             .clientConnector(new ReactorClientHttpConnector(httpClient))
             .build();
